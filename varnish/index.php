@@ -923,7 +923,7 @@ class VarnishAdmin extends VarnishCMD {
 	public $varnish_response;
 	public $flashError;
 
-	function __construct($params, $hosts) { print_r($_SESSION); die;
+	function __construct($params, $hosts) {
 		parent::__construct($params, $hosts);
 
 		if (empty($this->params['settings']['password'])) {
@@ -1048,7 +1048,7 @@ class VarnishAdmin extends VarnishCMD {
 					'query' => $query
 				)
 			);
-		} elseif (isset($_POST['login'])) {
+		} elseif (isset($_POST['login'])) { print_r($_SESSION); die;
 			if (!empty($_POST['password']) &&
 				$_POST['password'] === $this->params['settings']['password']) {
 				$this->setSession('varnish_user', 1);
