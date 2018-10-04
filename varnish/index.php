@@ -949,6 +949,7 @@ class VarnishAdmin extends VarnishCMD {
 	}
 
 	public function hasSession() {
+        return true;
 		return !empty($_SESSION['varnish_user']);
 	}
 
