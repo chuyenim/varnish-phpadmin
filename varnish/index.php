@@ -923,7 +923,7 @@ class VarnishAdmin extends VarnishCMD {
 	public $varnish_response;
 	public $flashError;
 
-	function __construct($params, $hosts) {
+	function __construct($params, $hosts) { print_r($_SESSION); die;
 		parent::__construct($params, $hosts);
 
 		if (empty($this->params['settings']['password'])) {
