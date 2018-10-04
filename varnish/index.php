@@ -1051,7 +1051,7 @@ class VarnishAdmin extends VarnishCMD {
 		} elseif (isset($_POST['login'])) {
 			if (!empty($_POST['password']) &&
 				$_POST['password'] === $this->params['settings']['password']) {
-				$this->setSession('varnish_user', 1); print_r($_SESSION); die;
+				$this->setSession('varnish_user', 1);
 			} else {
 				$this->flashError = 'Invalid password';
 			}
