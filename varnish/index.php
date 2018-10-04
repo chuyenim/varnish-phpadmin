@@ -1048,7 +1048,7 @@ class VarnishAdmin extends VarnishCMD {
 					'query' => $query
 				)
 			);
-		} elseif (isset($_POST['login'])) { print_r($_SESSION); die;
+		} elseif (isset($_POST['login'])) { print_r($this->params); die;
 			if (!empty($_POST['password']) &&
 				$_POST['password'] === $this->params['settings']['password']) {
 				$this->setSession('varnish_user', 1);
